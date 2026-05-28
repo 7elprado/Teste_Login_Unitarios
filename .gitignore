@@ -1,0 +1,7 @@
+node_modules/
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+.env
+.DS_Store
+package-lock.json

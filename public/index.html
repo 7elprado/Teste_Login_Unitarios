@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Login Page</title>
+</head>
+<body>
+    <input type="text" data-test="username" id="username" placeholder="Username">
+    <input type="password" data-test="password" id="password" placeholder="Password">
+    <button data-test="login-button" onclick="login()">Login</button>
+    <div data-test="error" id="error"></div>
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorDiv = document.getElementById('error');
+            
+            if(!username) {
+                errorDiv.textContent = 'Username is required';
+                return;
+            }
+            if(!password) {
+                errorDiv.textContent = 'Password is required';
+                return;
+            }
+            if(username === 'standard_user' && password === 'secret_sauce') {
+                window.location.href = '/inventory.html';
+            } else if(username === 'locked_out_user') {
+                errorDiv.textContent = 'Sorry, this user has been locked out';
+            } else {
+                errorDiv.textContent = 'Username and password do not match';
+            }
+        }
+    </script>
+</body>
+</html>
