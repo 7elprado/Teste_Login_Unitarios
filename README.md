@@ -77,7 +77,7 @@ teste-login-completo/
 
 └── README.md
 
-## 🚀 Como Executar os Testes
+##  Como Executar os Testes
 
 ### Instalar dependências
 npm install
@@ -90,7 +90,7 @@ Depois clique em login_completo.cy.js
 ### Executar apenas meus testes via terminal
 npx cypress run --spec "cypress/e2e/login_completo.cy.js"
 
-## 📊 Resultado Esperado
+##  Resultado Esperado
 
 Sistema de Login - Testes Completos
   ✓ CT-001: Login com credenciais válidas
